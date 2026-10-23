@@ -1,0 +1,38 @@
+{
+  "Version": "1.0",
+  "Name": "Codex-only-example",
+  "IsTrafficLoggingEnabled": false,
+  "AutoClearConnectionLogs": true,
+  "LogEveryConnection": false,
+  "Language": "en",
+  "CloseToTray": true,
+  "FontZoom": 100,
+  "NextProxyConfigId": 2,
+  "ProxyConfigs": [
+    {
+      "Id": 1,
+      "Name": "Existing local proxy - edit port first",
+      "Type": "SOCKS5",
+      "Host": "127.0.0.1",
+      "Port": "10808",
+      "Username": "",
+      "Password": "",
+      "SendDomainToProxy": true
+    }
+  ],
+  "ProxyRules": [
+    {
+      "Name": "Codex desktop - select exact executable path first",
+      "ProcessName": "ChatGPT.exe",
+      "TargetHosts": "*",
+      "TargetPorts": "443",
+      "TargetDomains": "*",
+      "Protocol": "TCP",
+      "Action": "PROXY",
+      "IsEnabled": false,
+      "LocalhostViaProxy": false,
+      "ProxyConfigId": 1
+    }
+  ],
+  "LogFilters": []
+}
